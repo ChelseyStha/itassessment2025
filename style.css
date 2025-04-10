@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    background-color: #f8f8f8; /* Light background color */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    background-color: #4c81e4; /* Header background color */
+    color: rgb(197, 197, 197); /* Header text color */
+    padding: 20px; /* Padding around header */
+    text-align: center; /* Center align text */
+}
+
+nav {
+    background-color: #101758;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav-link {
+    color: rgb(194, 191, 191);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;  /* Increased horizontal padding */
+    margin: 0 15px;      /* Space between links */
+    display: inline-block; /* Allows padding/margin to work */
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #4a9bd1;
+}
+ 
+
+
+ 
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding around main content */
+}
+
+h1, h2 {
+    color: #333; /* Dark text color for headings */
+}
+
+h2 {
+    margin-top: 20px; /* Space above subheadings */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+    max-width: 400px; /* Max width for the form */
+    margin: auto; /* Center the form */
+}
+
+label {
+    margin-top: 10px; /* Space above labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    margin-top: 10px; /* Space above button */
+    padding: 10px; /* Padding inside button */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Gallery Styles */
+.gallery {
+    display: block; /* Use block display for the gallery */
+    margin: 20px auto; /* Center the gallery */
+    max-width: 800px; /* Set a max width for the gallery */
+}
+
+.gallery img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between images */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center align footer text */
+    padding: 10px; /* Padding around footer */
+    background-color: #007BFF; /* Footer background color */
+    color: white; /* Footer text color */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+}
+/* Add to style.css */
+.slider {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+}
+
