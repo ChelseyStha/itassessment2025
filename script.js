@@ -1,38 +1,41 @@
 let slideIndex = 0;
-showSlides();
+const slides = document.getElementsByClassName("slide");
 
 function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  // Hide all slides
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}  // Reset to first slide
-    slides[slideIndex - 1].style.display = "block";  // Show the current slide
-    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+   
+    Array.from(slides).forEach(slide => slide.style.display = "none");
+    
+  
+        slideIndex = (slideIndex + 1) % slides.length;
+    
+   
+    slides[slideIndex].style.display = "block";
+
+    setTimeout(showSlides, 5000);
 }
 
 
 function plusSlides(n) {
-    slideIndex += n;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    if (slideIndex < 1) {slideIndex = slides.length}
-    showSlidesManually();
+    slideIndex = (slideIndex + n + slides.length) % slides.length; 
+    showCurrentSlide();
 }
 
-function showSlidesManually() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  // Hide all slides
-    }
-    slides[slideIndex - 1].style.display = "block";  // Show the current slide
+function showCurrentSlide() {
+    Array.from(slides).forEach(slide => slide.style.display = "none");
+    slides[slideIndex].style.display = "block"; 
 }
-// Add to script.js
+
+
 function validateForm() {
-    var email = document.getElementById("email").value;
-    if (email.indexOf("@") == -1) {
-        alert("Please enter a valid email address!");
+     const email = document.getElementById("email").value;
+    if (!email.includes("@")) {
+                alert("Please enter a valid email address!");
+
+
         return false;
     }
     return true;
 }
+
+// Start the slideshow
+showSlides();
