@@ -12,7 +12,7 @@ function showSlides() {
     setTimeout(showSlides, 3000); // Change slide every 3 seconds
 }
 
-// Function to change slides when clicking next/prev
+
 function plusSlides(n) {
     slideIndex += n;
     if (slideIndex > slides.length) {slideIndex = 1}
